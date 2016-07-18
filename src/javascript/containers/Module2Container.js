@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Box from '../components/Box';
 
 const Module2Container = React.createClass({
