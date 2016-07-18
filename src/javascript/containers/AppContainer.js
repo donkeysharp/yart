@@ -10,6 +10,7 @@ const AppContainer = React.createClass({
       <Link to={`/sub1/${id}`}>Module 1</Link>
       <br />
       <Link to={`/sub2/${id}`}>Module 2</Link>
+      <hr />
       { this.props.children }
     </div>;
   }
