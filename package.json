@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist/javascript/*.js; rm -rf dist/css/*.css",
-    "server": "browserify-server --server=. --port=8000",
+    "server": "ws --spa index.html -p 8000 --rewrite '/dist/* -> dist/$1'",
     "build": "parallelshell 'npm run clean' 'npm run build:js' 'npm run build:css'",
     "build:js": "browserify src/javascript/index.js -t [ babelify --presets [es2015 react] ] | uglifyjs -mc -o dist/javascript/main.min.js",
     "build:css": "sass src/scss/app.scss:dist/css/app.min.css --style compressed --sourcemap=none",
@@ -20,7 +20,7 @@
     "babel-preset-react": "^6.11.1",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
-    "browserify-server": "^2.1.18",
+    "local-web-server": "^1.2.6",
     "parallelshell": "^2.0.0",
     "uglify-js": "^2.7.0",
     "watchify": "^3.7.0"
