@@ -1,6 +1,7 @@
 React Template
 ==============
 
+Yet another npm-scripts-based SASS, ES2015(Babel), Browserify, React/Redux, React-Router SPA template
 
 ####Requirements
 * Install nodejs
@@ -10,8 +11,11 @@ React Template
 ####Options
 For production run:
 
-	$ npm run build
+    $ npm run build
 
 For development run:
 
-	$ npm run watch
+    $ npm run watch
+
+
+Browse *localhost:8000* to test
