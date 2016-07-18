@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
-let AppContainer = React.createClass({
+const AppContainer = React.createClass({
   render() {
     let id = Math.floor(Math.random()* 10);
     return <div>
