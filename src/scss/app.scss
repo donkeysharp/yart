@@ -2,7 +2,19 @@
 // @import 'module1';
 // @import 'module2';
 
+body {
+  font-family: sans-serif;
+}
+
 .wrapper {
   margin-left: auto;
   margin-right: auto;
+}
+
+.module1 {
+  background: #BFECF5;
+}
+
+.module2 {
+  background: #FF9393;
 }
