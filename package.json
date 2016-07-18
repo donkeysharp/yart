@@ -7,10 +7,10 @@
     "clean": "rm -rf dist/javascript/*.js; rm -rf dist/css/*.css",
     "server": "ws --spa index.html -p 8000 --rewrite '/dist/* -> dist/$1'",
     "build": "parallelshell 'npm run clean' 'npm run build:js' 'npm run build:css'",
-    "build:js": "browserify src/javascript/index.js -t [ babelify --presets [es2015 react] ] | uglifyjs -mc -o dist/javascript/main.min.js",
+    "build:js": "browserify src/javascript/index.js -t [ babelify --presets [es2015 react] ] | uglifyjs -mc -o dist/javascript/app.min.js",
     "build:css": "sass src/scss/app.scss:dist/css/app.min.css --style compressed --sourcemap=none",
     "watch": "parallelshell 'npm run server' 'npm run clean' 'npm run watch:css' 'npm run watch:js'",
-    "watch:js": "watchify src/javascript/index.js -o dist/javascript/main.js -t [ babelify --presets [es2015 react] ] -v",
+    "watch:js": "watchify src/javascript/index.js -o dist/javascript/app.js -t [ babelify --presets [es2015 react] ] -v",
     "watch:css": "sass --watch src/scss/app.scss:dist/css/app.css --sourcemap=none"
   },
   "author": "donkeysharp",
