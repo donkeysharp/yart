@@ -10,4 +10,8 @@ const Module2Container = React.createClass({
   }
 });
 
-export default Module2Container;
+function mapStateToProps(state) {
+  return {
+  };
+}
+export default connect(mapStateToProps)(Module2Container);
