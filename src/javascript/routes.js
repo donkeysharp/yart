@@ -6,6 +6,7 @@ import Module2Container from './containers/Module2Container';
 
 const routes = (
   <Route path="/" component={AppContainer}>
+    <IndexRoute component={Module1Container} />
     <Route path="sub1/:id" component={Module1Container} />
     <Route path="sub2/:id" component={Module2Container} />
   </Route>
