@@ -19,3 +19,7 @@ For development run:
 
 
 Browse *localhost:8000* to test
+
+####TODO:
+* Add support for node-sass
+* Make a webpack branch maybe
